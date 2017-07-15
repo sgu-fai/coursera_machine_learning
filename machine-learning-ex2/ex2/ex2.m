@@ -65,8 +65,8 @@ initial_theta = zeros(n + 1, 1);
 
 % Compute and display initial cost and gradient
 [cost, grad] = costFunction(initial_theta, X, y);
-
 fprintf('Cost at initial theta (zeros): %f\n', cost);
+pause;
 fprintf('Expected cost (approx): 0.693\n');
 fprintf('Gradient at initial theta (zeros): \n');
 fprintf(' %f \n', grad);
@@ -147,5 +147,3 @@ p = predict(theta, X);
 fprintf('Train Accuracy: %f\n', mean(double(p == y)) * 100);
 fprintf('Expected accuracy (approx): 89.0\n');
 fprintf('\n');
-
-
