@@ -25,7 +25,7 @@ J =  (1 / m) * sum( -y'*log(h)-(1-y)'*log(1 - h))+lambda/(2*m)*sum(theta.^2);
 
 grad(1) =  ( 1 / m)  * sum((h - y) .* X(:, 1));
 for j=2:n
-    grad(j) =  ( 1 / m)  * sum((h - y)  .* X(:, j)) + lambda/m*theta(j);
+  grad(j,:) =  ( 1 / m)  * sum((h - y)  .* X(:, j)) + lambda/m*theta(j);
 end
 
 % =============================================================
